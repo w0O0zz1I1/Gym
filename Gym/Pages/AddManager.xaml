@@ -1,0 +1,14 @@
+﻿<Window x:Class="Gym.Pages.AddManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gym.Pages"
+        mc:Ignorable="d"
+        Title="AddManager" Height="250" Width="550" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Grid Height="240" VerticalAlignment="Top" HorizontalAlignment="Left" Width="550">
+        <TextBox HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404" Height="28" Text="Логин" Background="White" FontSize="16" Foreground="#FFB5AEAE"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,100,0,0" TextWrapping="Wrap" Text="Пароль"  Background="White" FontSize="16" Foreground="#FFB5AEAE" VerticalAlignment="Top" Width="404" Height="28"/>
+        <Button  Content="Добавить менеджера" HorizontalAlignment="Center" VerticalAlignment="Top" Width="404" Height="32" Margin="0,162,0,0" FontSize="16"/>
+    </Grid>
+</Window>

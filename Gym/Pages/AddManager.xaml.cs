@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Gym
+namespace Gym.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AddManager.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddManager : Window
     {
-        public MainWindow()
+        public AddManager()
         {
             InitializeComponent();
         }
