@@ -10,25 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Gym.Pages;
 
-namespace Gym
+namespace Gym.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для LoginPage.xaml
+    /// Логика взаимодействия для ClientsListPage.xaml
     /// </summary>
-    public partial class LoginPage : Window
+    public partial class ClientsListPage : Page
     {
-        public LoginPage()
+        public ClientsListPage()
         {
             InitializeComponent();
-        }
-
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow clientsList = new MainWindow();
-            clientsList.Show();
         }
     }
 }

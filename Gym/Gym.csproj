@@ -67,14 +67,17 @@
     <Compile Include="Pages\AddManager.xaml.cs">
       <DependentUpon>AddManager.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ClientCard.xaml.cs">
-      <DependentUpon>ClientCard.xaml</DependentUpon>
+    <Compile Include="Pages\ClientsListPage.xaml.cs">
+      <DependentUpon>ClientsListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ClientsList.xaml.cs">
-      <DependentUpon>ClientsList.xaml</DependentUpon>
+    <Compile Include="Pages\ClietnCardPage.xaml.cs">
+      <DependentUpon>ClietnCardPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -106,15 +109,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ClientCard.xaml">
+    <Page Include="Pages\ClientsListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ClientsList.xaml">
+    <Page Include="Pages\ClietnCardPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

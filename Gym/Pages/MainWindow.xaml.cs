@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Gym.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ClientCard.xaml
+    /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class ClientCard : Window
+    public partial class MainWindow : Window
     {
-        public ClientCard()
+        public MainWindow()
         {
             InitializeComponent();
         }
