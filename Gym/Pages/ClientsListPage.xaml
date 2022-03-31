@@ -27,6 +27,6 @@
         <TextBox Foreground="#FF867171" HorizontalAlignment="Left" Margin="692,269,0,0" TextWrapping="Wrap" Text="Номер телефона" VerticalAlignment="Top" Width="348" Height="30" FontSize="16"/>
         <Button  Content="Добавить нового клиента" HorizontalAlignment="Left" Margin="692,320,0,0" VerticalAlignment="Top" Width="348" Height="47"/>
         <TextBox HorizontalAlignment="Left" Margin="674,1,0,0" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" Width="238" FontSize="16" Foreground="#FF867171"/>
-        <Button  Content="Найти" HorizontalAlignment="Left" Margin="926,1,0,0" VerticalAlignment="Top" Height="23" Width="114" />
+        <Button  Content="Найти" HorizontalAlignment="Left" Margin="926,1,0,0" VerticalAlignment="Top" Height="23" Width="114" Click="Button_Click" />
     </Grid>
 </Page>

@@ -10,6 +10,6 @@
         <Image Margin="10,10,0,10" Source="/Resourse/logo.png" Stretch="Fill" Height="154" VerticalAlignment="Top" HorizontalAlignment="Left" Width="180"/>
         <Label Content="Список клиентов" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top" Width="494" Height="78" FontSize="36" FontWeight="Bold" HorizontalContentAlignment="Center"/>
         <Button Content="+" HorizontalAlignment="Left" Margin="857,12,0,0" VerticalAlignment="Top" Height="122" Width="199" IsCancel="True" FontSize="48" VerticalContentAlignment="Center" Padding="1,-12,1,1"/>
-        <Frame x:Name="CetnralFrame" Content="" Margin="0,180,0,0" HorizontalAlignment="Center" Width="1065" Height="407" VerticalAlignment="Top" Source="/Pages/ClietnCardPage.xaml" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="CetnralFrame" Content="" Margin="0,180,0,0" HorizontalAlignment="Center" Width="1065" Height="407" VerticalAlignment="Top" Source="/Pages/ClientsListPage.xaml" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

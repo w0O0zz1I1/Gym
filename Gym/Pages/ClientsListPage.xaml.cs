@@ -24,5 +24,11 @@ namespace Gym.Pages
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
+            mainWindow.CetnralFrame.Navigate(new Pages.ClietnCardPage());
+        }
     }
 }
