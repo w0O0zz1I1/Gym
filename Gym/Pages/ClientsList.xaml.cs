@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Service;
 
 namespace Gym.Pages
 {
@@ -22,6 +23,10 @@ namespace Gym.Pages
         public ClientsList()
         {
             InitializeComponent();
+            if (GlobalContainer.Role.Equals("Admin")){
+                AddManager.Visibility = Visibility.Visible;
+            }
+            DgridClients.ItemsSource = CleintService.getAllClients();
         }
         /// <summary>
         /// При клике на кнопку "поиск" открывается страница карточка клиента
@@ -45,6 +50,7 @@ namespace Gym.Pages
             AddManager addManager = new AddManager();
             addManager.Show();
         }
-       
+        
+
     }
 }

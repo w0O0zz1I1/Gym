@@ -9,10 +9,10 @@
     <Grid Margin="10,10,10,10">
         <TextBox Name="LoginTextBox" Text="Логин" Margin="0,40,0,0" TextWrapping="Wrap" Background="White"
                  FontSize="16" Foreground="#FFB5AEAE" HorizontalAlignment="Center" Width="404" Height="28"
-                 VerticalAlignment="Top" />
+                 VerticalAlignment="Top" ToolTip="Логин"/>
         <TextBox Name="PasswordTextBox" HorizontalAlignment="Center" Margin="0,100,0,0" TextWrapping="Wrap"
                  Text="Пароль" Background="White" FontSize="16" Foreground="#FFB5AEAE" VerticalAlignment="Top"
-                 Width="404" Height="28" />
+                 Width="404" Height="28"  ToolTip="Пароль"/>
         <Button Name="LoginButton" Content="Авторизоваться"
                 HorizontalAlignment="Center" VerticalAlignment="Top" Width="404" Height="32" Margin="0,156,0,0"
                 FontSize="16" Click="LoginButton_Click"/>

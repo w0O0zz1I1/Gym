@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Gym.Pages;
+using Service;
 
 namespace Gym
 {
@@ -27,8 +28,17 @@ namespace Gym
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            ClientsList clientsList = new ClientsList();
-            clientsList.Show();
+            string login = LoginTextBox.Text.Trim();
+            string password = PasswordTextBox.Text.Trim();
+            if (Autorization.Login(login, password) == true){
+                ClientsList clientsList = new ClientsList();
+                clientsList.Show();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Пользователь не найден, неверный логин или пароль");
+            }
         }
     }
 }
