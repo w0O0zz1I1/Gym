@@ -26,31 +26,69 @@ namespace Gym.Pages
             if (GlobalContainer.Role.Equals("Admin")){
                 AddManager.Visibility = Visibility.Visible;
             }
-            DgridClients.ItemsSource = CleintService.getAllClients();
+            DgridClients.ItemsSource = ClientService.GetAllClients();
         }
-        /// <summary>
-        /// При клике на кнопку "поиск" открывается страница карточка клиента
-        /// т.к. это тестовая ветка для разработки UI решили реализовать так
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+  
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            ClientCard clientCard = new ClientCard();
-            clientCard.Show();
+            string str = FindTextBox.Text.Trim();
+            List<Client> clients = ClientService.FindClients(str);
+            if(clients.Count == 0)
+            {
+                MessageBox.Show("Клиент не найден");
+                return;
+            }
+            else
+            {
+                DgridClients.ItemsSource = clients;
+            }
         }
 
-        /// <summary>
-        /// При клике на + открывается окно добавления менеджера причина такая же
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+      
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             AddManager addManager = new AddManager();
             addManager.Show();
         }
-        
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var clients = DgridClients.SelectedItems.Cast<Client>().ToList();
+            if (ClientService.DeleteClients(clients))
+            {
+                MessageBox.Show("Клиент удален");
+            }
+            else
+            {
+                MessageBox.Show("Клиент не  удален");
+            }
+            DgridClients.ItemsSource = ClientService.GetAllClients();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {   
+            string firstName = FirstNameTextBox.Text.Trim();
+            string lastName = lastNameTextBox.Text.Trim();
+            string patranymic = PatranymicTextBox.Text.Trim();
+            string phone = PhoneTextBox.Text.Trim();
+
+            if (ClientService.CheckInputs(firstName, lastName, patranymic, phone))
+            {
+                if (ClientService.AddClient(firstName, lastName, patranymic, phone))
+                {
+                    DgridClients.ItemsSource = ClientService.GetAllClients();
+                    MessageBox.Show("Клиент добавлен");
+                }
+                else
+                {
+                    MessageBox.Show("Клиент не добавлен");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не валидные данные");
+            }
+            
+        }
     }
 }

@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autorization.cs" />
-    <Compile Include="CleintService.cs" />
+    <Compile Include="ClientService.cs" />
     <Compile Include="Client.cs">
       <DependentUpon>ModelDataBase.tt</DependentUpon>
     </Compile>
