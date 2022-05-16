@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SubscriptionService.cs" />
     <Compile Include="Autorization.cs" />
     <Compile Include="ClientService.cs" />
     <Compile Include="Client.cs">

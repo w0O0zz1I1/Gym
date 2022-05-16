@@ -79,7 +79,6 @@ namespace Gym.Pages
             {
                 MessageBox.Show("Не валидные данные");
             }
-            
         }
 
         private void DgridClients_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -89,9 +88,8 @@ namespace Gym.Pages
                 return;
 
             GlobalContainer.Id = client.Id;
-            GlobalContainer.Lastname = client.LastName;
             GlobalContainer.Name = client.FirstName;
-            GlobalContainer.Surname = client.Patranymic;
+            GlobalContainer.Surname = client.LastName;
 
             ClientCard clientCard = new ClientCard();
             clientCard.Title = "Карточка клиента";

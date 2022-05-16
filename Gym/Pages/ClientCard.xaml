@@ -9,20 +9,20 @@
     <Grid HorizontalAlignment="Center" Width="1065" Height="587" VerticalAlignment="Top">
         <Image Margin="10,10,0,10" Source="/Resourse/logo.png" Stretch="Fill" Height="154" VerticalAlignment="Top" HorizontalAlignment="Left" Width="180"/>
         <Label Name="ClientName"  Content="" HorizontalAlignment="Center" Margin="195,41,21,0" VerticalAlignment="Top" Width="849" Height="78" FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <DataGrid Name="DgridClients" AutoGenerateColumns="False" Margin="10,180,0,23" HorizontalAlignment="Left" Width="632">
+        <DataGrid Name="DgridClients" AutoGenerateColumns="False" Margin="10,180,0,23" HorizontalAlignment="Left" Width="632" CanUserAddRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Дата покупки" Binding="{Binding DateCreated}" Width="100"/>
+                <DataGridTextColumn Header="Дата покупки" Binding="{Binding DateCreateSubscription}" Width="100"/>
                 <DataGridTextColumn Header="Цена абонимента" Binding="{Binding Price}" Width="110"/>
-                <DataGridTextColumn Header="Количество занятий" Binding="{Binding WorkoutsAmount}" Width="120"/>
-                <DataGridTextColumn Header="Пройденных занятий" Binding="{Binding PassedWorkouts}" Width="130"/>
-                <DataGridTextColumn Header="Дата последнего посещения" Binding="{Binding LastWorkoutDateTime}" Width="170"/>
+                <DataGridTextColumn Header="Количество занятий" Binding="{Binding WorkOutsAmount}" Width="120"/>
+                <DataGridTextColumn Header="Пройденных занятий" Binding="{Binding WorkOutsPassed}" Width="130"/>
+                <DataGridTextColumn Header="Дата последнего посещения" Binding="{Binding LastWorkOutDateTime}" Width="170"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Отметить посещение" HorizontalAlignment="Left" Margin="666,180,0,0" VerticalAlignment="Top" Width="378" Height="30" />
+        <Button Name="AddVisit" Content="Отметить посещение" HorizontalAlignment="Left" Margin="666,180,0,0" VerticalAlignment="Top" Width="378" Height="30" Click="AddVisit_Click" />
         <Rectangle HorizontalAlignment="Left" Height="338" Margin="666,224,0,0" Stroke="Black" VerticalAlignment="Top" Width="378"/>
         <Label Content="Добавить абонимент" HorizontalAlignment="Left" Margin="688,224,0,0" VerticalAlignment="Top" Width="362" Height="39" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25"/>
-        <TextBox Foreground="#FF867171" HorizontalAlignment="Left" Margin="700,281,0,0" TextWrapping="Wrap" Text="Цена" VerticalAlignment="Top" Width="302" Height="31" FontSize="16"/>
-        <TextBox Foreground="#FF867171" HorizontalAlignment="Left" Margin="700,332,0,0" TextWrapping="Wrap" Text="Количество занятий" VerticalAlignment="Top" Width="302" Height="36" FontSize="16"/>
-        <Button Content="Добавить" HorizontalAlignment="Left" Margin="680,495,0,0" VerticalAlignment="Top" Width="350" Height="46"/>
+        <TextBox Name="Price" Foreground="#FF867171" HorizontalAlignment="Left" Margin="700,281,0,0" TextWrapping="Wrap" Text="Цена" VerticalAlignment="Top" Width="302" Height="31" FontSize="16" TextChanged="Price_TextChanged"/>
+        <TextBox Name="WorkOutsAmount" Foreground="#FF867171" HorizontalAlignment="Left" Margin="700,332,0,0" TextWrapping="Wrap" Text="Количество занятий" VerticalAlignment="Top" Width="302" Height="36" FontSize="16" TextChanged="WorkOutsAmount_TextChanged"/>
+        <Button Name="AddSubscription" Content="Добавить" HorizontalAlignment="Left" Margin="680,495,0,0" VerticalAlignment="Top" Width="350" Height="46" Click="AddSubscription_Click"/>
     </Grid>
 </Window>

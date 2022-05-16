@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/05/2022 19:34:46
--- Generated from EDMX file: C:\Users\w0zz1\source\repos\Gym\Service\ModelDataBase.edmx
+-- Date Created: 05/16/2022 12:05:58
+-- Generated from EDMX file: C:\Users\epavlova\source\repos\Gym-funcBracnh\Service\ModelDataBase.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [GYM];
+USE [gym];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -17,6 +17,9 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_ClientSubscription]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Subscriptions] DROP CONSTRAINT [FK_ClientSubscription];
+GO
 IF OBJECT_ID(N'[dbo].[FK_RoleUser]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Users] DROP CONSTRAINT [FK_RoleUser];
 GO
@@ -25,11 +28,17 @@ GO
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[Users]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Users];
+IF OBJECT_ID(N'[dbo].[Clients]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Clients];
 GO
 IF OBJECT_ID(N'[dbo].[Roles]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Roles];
+GO
+IF OBJECT_ID(N'[dbo].[Subscriptions]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Subscriptions];
+GO
+IF OBJECT_ID(N'[dbo].[Users]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Users];
 GO
 
 -- --------------------------------------------------
@@ -70,7 +79,7 @@ CREATE TABLE [dbo].[Subscriptions] (
     [WorkOutsPassed] int  NOT NULL,
     [Price] decimal(18,0)  NOT NULL,
     [DateCreateSubscription] datetime  NOT NULL,
-    [LastWorkOutDateTime] datetime  NOT NULL,
+    [LastWorkOutDateTime] datetime  NULL,
     [Client_Id] int  NOT NULL
 );
 GO

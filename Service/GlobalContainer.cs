@@ -10,7 +10,5 @@
         public static string Surname { get; set; }
         // Имя клиента 
         public static string Name { get; set; }
-        // Отчество клиента 
-        public static string Lastname { get; set; }
     }
 }
